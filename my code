@@ -1,0 +1,173 @@
+# UI CalculatorKids!
+import customtkinter as ctk
+from PIL import Image
+import math
+
+app = ctk.CTk()
+app.title("Calculator")
+app.geometry("355x425")
+app.resizable(False, False)
+
+# Load your image using PIL
+pil_image = Image.open("CalculatorKids.png")
+
+# Convert it to CTkImage
+bg_image = ctk.CTkImage(light_image=pil_image, dark_image=pil_image, size=(500, 775))
+bg_label = ctk.CTkLabel(app, image=bg_image, text="")
+
+# Use it in a CTkLabel or background
+bg_label.place(x=-75, y=-175)
+
+app.bind("<Return>", lambda event: answer())
+
+# Internal expression
+expression = ""
+
+options = ["Basics","Advanced","Options"]
+
+buttons = [
+    "1","2","3","+",
+    "4","5","6","-",
+    "7","8","9","*",
+    "0",".","/",
+    "(",")"
+]
+
+def button_index(index):
+    global expression
+    if index < 20:
+        symbol = buttons[index - 1]
+        expression = entry.get()
+        expression = expression + symbol
+
+        # Show pretty version
+        display = symbol.replace("*", "×").replace("/", "÷")
+        entry.insert("end", display)
+    else:
+        if index == 22: remove()
+        if index == 24: clear()
+        if index == 25: answer()
+
+def remove():
+    if len(entry.get()) > 0:
+        entry.delete(0, "end")
+
+def clear():
+    entry.delete(0, "end")
+
+def answer():
+    global expression
+    expression = entry.get()
+    expression.replace("×","*").replace("÷","/")
+    try:
+        # use math for advanced functions
+        result = eval(expression, {"__builtins__": None}, {"sqrt": math.sqrt})
+        expression = str(result)
+        entry.delete(0, "end")
+        entry.insert(0, expression)
+    except:
+        entry.delete(0, "end")
+        entry.insert(0, "Error!")
+
+# Button functions
+def button_one(): button_index(1)
+def button_two(): button_index(2)
+def button_three(): button_index(3)
+def button_plus(): button_index(4)
+def button_four(): button_index(5)
+def button_five(): button_index(6)
+def button_six(): button_index(7)
+def button_minus(): button_index(8)
+def button_seven(): button_index(9)
+def button_eight(): button_index(10)
+def button_nine(): button_index(11)
+def button_multiply(): button_index(12)
+def button_zero(): button_index(13)
+def button_dot(): button_index(14)
+def button_divide(): button_index(15)
+def button_equal(): button_index(25)
+def button_open(): button_index(16)
+def button_close(): button_index(17)
+def button_remove(): button_index(22)
+def button_clear(): button_index(24)
+
+# Special advanced button function
+def button_sqrt():
+    global expression
+    expression += "sqrt("
+    entry.delete(0, "end")
+    entry.insert(0, expression)
+
+# Option menu to switch modes
+def mode_changed(choice):
+    if choice == "Advanced":
+        button_7.configure(text="7", command=button_sqrt)
+    else:
+        button_7.configure(text="1", command=button_one)
+
+xtogo = -25
+ytogo = 35
+
+x = 35
+y = 35
+
+entry = ctk.CTkEntry(app, width=300, height=30)
+entry.place(x=x-25, y=y)
+
+source_dropdown=ctk.CTkOptionMenu(app,values=list(options),command=mode_changed)
+source_dropdown.place(x=10,y=+5)
+
+# Create buttons with width=30, height=30x
+button_1 = ctk.CTkButton(app, text ="1", width = 30, height= 30, command=button_one)
+button_2 = ctk.CTkButton(app, text="2", width=30, height=30, command=button_two)
+button_3 = ctk.CTkButton(app, text="3", width=30, height=30, command=button_three)
+button_plus = ctk.CTkButton(app, text="+", width=30, height=30, command=button_plus)
+
+button_4 = ctk.CTkButton(app, text="4", width=30, height=30, command=button_four)
+button_5 = ctk.CTkButton(app, text="5", width=30, height=30, command=button_five)
+button_6 = ctk.CTkButton(app, text="6", width=30, height=30, command=button_six)
+button_minus = ctk.CTkButton(app, text="-", width=30, height=30, command=button_minus)
+
+button_7 = ctk.CTkButton(app, text="7", width=30, height=30, command=button_seven)
+button_8 = ctk.CTkButton(app, text="8", width=30, height=30, command=button_eight)
+button_9 = ctk.CTkButton(app, text="9", width=30, height=30, command=button_nine)
+button_multiply = ctk.CTkButton(app, text="×", width=30, height=30, command=button_multiply)
+
+button_0 = ctk.CTkButton(app, text="0", width=65, height=30, command=button_zero)
+button_dot = ctk.CTkButton(app, text=".", width=30, height=30, command=button_dot)
+button_divide = ctk.CTkButton(app, text="÷", width=30, height=30, command=button_divide)
+
+button_equal = ctk.CTkButton(app, text="=", width=135, height=30, command=button_equal)
+button_cur1 = ctk.CTkButton(app, text="(", width=30, height=30, command=button_open)
+button_cur2 = ctk.CTkButton(app, text=")", width=30, height=30, command=button_close)
+
+button_c = ctk.CTkButton(app, text="C", width=30, height=30, command=button_remove)
+button_ac = ctk.CTkButton(app, text="AC", width=30, height=30, command=button_clear)
+
+# Place buttons
+button_1.place(x=x*1+xtogo,y=y*1+ytogo)
+button_2.place(x=x*2+xtogo,y=y*1+ytogo)
+button_3.place(x=x*3+xtogo,y=y*1+ytogo)
+button_plus.place(x=x*4+xtogo,y=y*1+ytogo)
+
+button_4.place(x=x*1+xtogo,y=y*2+ytogo)
+button_5.place(x=x*2+xtogo,y=y*2+ytogo)
+button_6.place(x=x*3+xtogo,y=y*2+ytogo)
+button_minus.place(x=x*4+xtogo,y=y*2+ytogo)
+
+button_7.place(x=x*1+xtogo,y=y*3+ytogo)
+button_8.place(x=x*2+xtogo,y=y*3+ytogo)
+button_9.place(x=x*3+xtogo,y=y*3+ytogo)
+button_multiply.place(x=x*4+xtogo,y=y*3+ytogo)
+
+button_0.place(x=x*1+xtogo,y=y*4+ytogo)
+button_dot.place(x=x*3+xtogo,y=y*4+ytogo)
+button_divide.place(x=x*4+xtogo,y=y*4+ytogo)
+
+button_equal.place(x=x*1+xtogo,y=y*5+ytogo)
+button_cur1.place(x=x*5+xtogo,y=y*1+ytogo)
+button_cur2.place(x=x*6+xtogo,y=y*1+ytogo)
+button_c.place(x=x*9.7+xtogo,y=y*0+ytogo)
+button_ac.place(x=x*9.7+xtogo,y=y*1+ytogo)
+
+app.mainloop()
