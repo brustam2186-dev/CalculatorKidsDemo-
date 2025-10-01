@@ -1,6 +1,8 @@
 # UI CalculatorKids!
 import customtkinter as ctk
 from PIL import Image
+
+# do not pip Install math
 import math
 
 app = ctk.CTk()
