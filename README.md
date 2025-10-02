@@ -15,3 +15,4 @@ It features a clean UI, background image support, and some calculation functions
 -After opening pyChar or Vs code create a pithon file and make a CalculatorKidsDemo.py in your file.
 -Then paste the code in your CalculatorKidsDemo so it will be like this:
 -If you want to go and look how it should look by now go to Screen Shot in this progect
+-And remember to read requirements.txt!
