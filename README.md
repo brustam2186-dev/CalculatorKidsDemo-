@@ -11,7 +11,7 @@ It features a clean UI, background image support, and some calculation functions
 
 ## How get the code and start using my Calculator
 -First copy the code from "my code" in this project.
--Then open the place were you code pithon like pyChar or Vs code.
--After opening pyChar or Vs code create a pithon file and make a CalculatorKidsDemo.py in your file.
+-Then open the place where you code python like pyChar or Vs code.
+-After opening pyChar or Vs code create a python file and make a CalculatorKidsDemo.py in your file.
 -Then paste the code in your CalculatorKidsDemo so it will be like this: https://postimg.cc/K3G4dhVD
 -And remember to read requirements.txt!
