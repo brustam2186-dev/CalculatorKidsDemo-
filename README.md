@@ -7,7 +7,7 @@ It features a clean UI, background image support, and some calculation functions
 -  **Advanced Mode**: Coming soon (Includes square root (√), and expandable for more functions)  
 -  **AI Mode** Coming soon (Planned integration with AI for advanced math help)
 -  **Custom Background** with images (Pillow support)  
--  **Keyboard Support** → press **Enter** for `=`
+-  **Keyboard Support** → press **Enter** for `=` or gust write an expression in entry
 
 ## How get the code and start using my Calculator
 -First copy the code from "my code" in this project.
