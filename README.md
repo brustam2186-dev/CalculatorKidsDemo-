@@ -1,4 +1,4 @@
-# Calculator-
+# CalculatorKidsDemo-
 A modern Python calculator built with **CustomTkinter**, it does supports **Basic Mode**,but not Advanced Mode **Advanced Mode** for now, and an optional **AI Mode** (coming soon).  
 It features a clean UI, background image support, and some calculation functions.
 
