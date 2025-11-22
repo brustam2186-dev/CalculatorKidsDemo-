@@ -1,20 +1,77 @@
-# CalculatorKidsDemo-
-A modern Python calculator built with **CustomTkinter**, it does supports **Basic Mode**,but not Advanced Mode **Advanced Mode** for now, and an optional **AI Mode** (coming soon).  
-It features a clean UI, background image support, and some calculation functions.
+📟 Calculator Kids (Demo)
 
-## ✨ Features
-- **Basic Mode**: Standard arithmetic operations (+, -, ×, ÷, decimals, parentheses)  
--  **Advanced Mode**: Coming soon (Includes square root (√), and expandable for more functions)  
--  **AI Mode** Coming soon (Planned integration with AI for advanced math help)
--  **Custom Background** with images (Pillow support)  
--  **Keyboard Support** → press **Enter** for `=` or gust write an expression in entry
+A modern, clean Python calculator built with CustomTkinter.
+It currently supports Basic Mode, with upcoming support for Advanced Mode and an optional AI Mode.
 
-## How get the code and start using my Calculator
--First copy the code from "my code" in this project.
--Then open the place where you code python like pyChar or Vs code.
--After opening pyChar or Vs code create a python file and make a Calculator.py in your file.
--Then paste the code in your CalculatorKidsDemo so it will be like this: https://postimg.cc/K3G4dhVD
--And remember to read requirements.txt!
+This project features a simple UI, optional background images, keyboard support, and easy setup.
 
-## Git Clone 
-git clone https://github.com/brustam2186-dev/CalculatorKidsDemo-
+✨ Features
+
+  Basic Mode
+  Standard arithmetic operations: +, -, ×, ÷, decimals, and parentheses.
+
+  Advanced Mode (coming soon)
+  Features like square root (√), power functions, and more.
+
+  AI Mode (coming soon)
+  Planned integration with AI for advanced math explanations and help.
+
+  Custom Backgrounds
+  Add your own images using Pillow (PIL).
+
+  Keyboard Support
+  Press Enter to calculate or simply type into the entry box.
+
+🚀 Getting Started
+
+  Option 1: Clone the Repository
+  git clone https://github.com/brustam2186-dev/CalculatorKidsDemo-
+
+  Option 2: Manually Copy the Code
+
+  Open your Python editor (PyCharm, VS Code, etc.)
+
+  Create a new file named Calculator.py
+
+  Copy the code from the "my code" folder in this repository
+
+  Paste it into your Calculator.py file
+
+  Make sure you install the required packages listed in requirements.txt
+
+Example setup screenshot:
+https://postimg.cc/K3G4dhVD
+
+📦 Install Requirements
+
+  Install dependencies before running:
+  
+  pip install -r requirements.txt
+  
+  📸 Screenshots (Optional — Add Your Images Here)
+  
+  You can add images like this:
+  
+  ![App Screenshot](images/screenshot.png)
+
+🛠️ Roadmap
+
+   Release Advanced Mode
+  
+   Add AI Mode
+  
+   Add settings menu
+  
+   Add custom themes
+  
+   Add more math functions
+
+🤝 Contributing
+
+  Contributions, suggestions, and pull requests are welcome!
+  Feel free to open an issue or fork the repository.
+
+📜 License
+
+  You can add a license here (MIT recommended).
+  If you want, I can generate a full MIT license for you.
