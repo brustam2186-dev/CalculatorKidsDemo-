@@ -16,7 +16,7 @@ This project features a simple UI, optional background images, keyboard support,
   AI Mode (coming soon)
   Planned integration with AI for advanced math explanations and help.
 
-  Custom Backgrounds
+  Custom Backgrounds (coming soon)
   Add your own images using Pillow (PIL).
 
   Keyboard Support
